@@ -26,13 +26,9 @@ USER_SERVICE_URL: http://learner-service:9000
 
 replicaCount: 1
 
-image:
-  registry: sunbirded.azurecr.io
-  repository: sunbirded.azurecr.io/ml-core-service
-  tag: release-5.2.0
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  
+dockerhub: docker.io
+repository: tsprasath91/ml-core-service
+image_tag: release-5.2.0_1159b45_4
 
 imagePullSecrets: []
 nameOverride: ""
