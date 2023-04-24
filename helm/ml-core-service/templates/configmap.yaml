@@ -4,41 +4,17 @@ metadata:
   name: {{ .Chart.Name}}-config
   namespace: {{ .Release.Namespace }}
 data:
-    APP_PORTAL_BASE_URL: https://staging.sunbirded.org
-    APPLICATION_ENV: staging
-    APPLICATION_PORT: "3000"
-    AZURE_ACCOUNT_KEY: 7xfCipYY8YcaYRWZ+d0nQmTrjhjv5RC7MQJlbOQHG58+Bx2ZvYlWqtPTLwbVOkeL9f0NgA2frTxD1vnrTWpUxA==
-    AZURE_ACCOUNT_NAME: sunbirdstagingpublic
-    AZURE_STORAGE_CONTAINER: samiksha
-    CLOUD_STORAGE: AZURE
-    ELASTICSEARCH_COMMUNICATIONS_ON_OFF: "OFF"
-    ELASTICSEARCH_ENTITIES_INDEX: ""
-    ELASTICSEARCH_HOST_URL: ""
-    ENABLE_CONSOLE_LOGGING: "OFF"
-    GOTENBERG_SERVICE_URL: http://gotenberg-service:3000
-    INTERNAL_ACCESS_TOKEN: e7220b7539363210ed15
-    KEYCLOAK_PUBLIC_KEY_PATH: keycloak-public-keys
-    ML_PROJECT_SERVICE_URL: http://ml-projects-service:3000
-    ML_SURVEY_SERVICE_URL: http://ml-survey-service:3000
-    MONGODB_URL: mongodb://11.3.2.26:27017/ml-survey
-    USER_SERVICE_URL: http://learner-service:9000
-
-# data:
-#   APP_PORTAL_BASE_URL: {{ .Values.APP_PORTAL_BASE_URL }}
-#   APPLICATION_ENV: {{ .Values.APPLICATION_ENV }}
-#   APPLICATION_PORT: {{ .Values.APPLICATION_PORT | quote}}
-#   AZURE_ACCOUNT_KEY: {{ .Values.AZURE_ACCOUNT_KEY }}
-#   AZURE_ACCOUNT_NAME: {{ .Values.AZURE_ACCOUNT_NAME }}
-#   AZURE_STORAGE_CONTAINER: {{ .Values.AZURE_STORAGE_CONTAINER }}
-#   CLOUD_STORAGE: {{ .Values.CLOUD_STORAGE }}
-#   ELASTICSEARCH_COMMUNICATIONS_ON_OFF: {{ .Values.ELASTICSEARCH_COMMUNICATIONS_ON_OFF }}
-#   ELASTICSEARCH_ENTITIES_INDEX: {{ .Values.ELASTICSEARCH_ENTITIES_INDEX | quote}}
-#   ELASTICSEARCH_HOST_URL: {{ .Values.ELASTICSEARCH_HOST_URL | quote}}
-#   ENABLE_CONSOLE_LOGGING: {{ .Values.ENABLE_CONSOLE_LOGGING }}
-#   GOTENBERG_SERVICE_URL: {{ .Values.GOTENBERG_SERVICE_URL }}
-#   INTERNAL_ACCESS_TOKEN: {{ .Values.INTERNAL_ACCESS_TOKEN }}
-#   KEYCLOAK_PUBLIC_KEY_PATH: {{ .Values.KEYCLOAK_PUBLIC_KEY_PATH }}
-#   ML_PROJECT_SERVICE_URL: {{ .Values.ML_PROJECT_SERVICE_URL }}
-#   ML_SURVEY_SERVICE_URL: {{ .Values.ML_SURVEY_SERVICE_URL }}
-#   MONGODB_URL: {{ .Values.MONGODB_URL }}
-#   USER_SERVICE_URL: {{ .Values.USER_SERVICE_URL }}
+  APPLICATION_ENV: "{{ .Values.application_env }}"
+  APPLICATION_PORT: "{{ .Values.application_port }}"
+  APP_PORTAL_BASE_URL: "{{ .Values.app_portal_base_url }}"
+  AZURE_ACCOUNT_KEY: "{{ .Values.azure_account_key }}"
+  AZURE_ACCOUNT_NAME: "{{ .Values.azure_account_name }}"
+  AZURE_STORAGE_CONTAINER: "{{ .Values.azure_storage_container }}"
+  CLOUD_STORAGE: "{{ .Values.cloud_storage }}"
+  GOTENBERG_SERVICE_URL: "{{ .Values.gotenberg_service_url }}"
+  INTERNAL_ACCESS_TOKEN: "{{ .Values.internal_access_token }}"
+  KEYCLOAK_PUBLIC_KEY_PATH: "{{ .Values.keycloak_public_key_path }}"
+  ML_PROJECT_SERVICE_URL: "{{ .Values.ml_project_service_url }}"
+  ML_SURVEY_SERVICE_URL: "{{ .Values.ml_survey_service_url }}"
+  MONGODB_URL: "{{ .Values.mongodb_url }}"
+  USER_SERVICE_URL: "{{ .Values.user_service_url }}"

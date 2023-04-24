@@ -2,37 +2,33 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+app_portal_base_url: https://staging.sunbirded.org
+application_env: staging
+application_port: "3000"
+azure_account_key: 7xfcipyy8ycayrwz+d0nqmtrjhjv5rc7mqjlboqhg58+bx2zvylwqtptlwbvokel9f0nga2frtxd1vnrtwpuxa==
+azure_account_name: sunbirdstagingpublic
+azure_storage_container: samiksha
+cloud_storage: azure
+elasticsearch_communications_on_off: "off"
+elasticsearch_entities_index: ""
+elasticsearch_host_url: ""
+enable_console_logging: "off"
+gotenberg_service_url: http://gotenberg-service:3000
+internal_access_token: e7220b7539363210ed15
+keycloak_public_key_path: keycloak-public-keys
+ml_project_service_url: http://ml-projects-service:3000
+ml_survey_service_url: http://ml-survey-service:3000
+mongodb_url: mongodb://11.3.2.26:27017/ml-survey
+user_service_url: http://learner-service:9000
 
 
-
-APP_PORTAL_BASE_URL: https://staging.sunbirded.org
-APPLICATION_ENV: staging
-APPLICATION_PORT: "3000"
-AZURE_ACCOUNT_KEY: 7xfCipYY8YcaYRWZ+d0nQmTrjhjv5RC7MQJlbOQHG58+Bx2ZvYlWqtPTLwbVOkeL9f0NgA2frTxD1vnrTWpUxA==
-AZURE_ACCOUNT_NAME: sunbirdstagingpublic
-AZURE_STORAGE_CONTAINER: samiksha
-CLOUD_STORAGE: AZURE
-ELASTICSEARCH_COMMUNICATIONS_ON_OFF: "OFF"
-ELASTICSEARCH_ENTITIES_INDEX: ""
-ELASTICSEARCH_HOST_URL: ""
-ENABLE_CONSOLE_LOGGING: "OFF"
-GOTENBERG_SERVICE_URL: http://gotenberg-service:3000
-INTERNAL_ACCESS_TOKEN: e7220b7539363210ed15
-KEYCLOAK_PUBLIC_KEY_PATH: keycloak-public-keys
-ML_PROJECT_SERVICE_URL: http://ml-projects-service:3000
-ML_SURVEY_SERVICE_URL: http://ml-survey-service:3000
-MONGODB_URL: mongodb://11.3.2.26:27017/ml-survey
-USER_SERVICE_URL: http://learner-service:9000
 
 replicaCount: 1
-
 dockerhub: docker.io
 repository: tsprasath91/ml-core-service
 image_tag: release-5.2.0_1159b45_4
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
