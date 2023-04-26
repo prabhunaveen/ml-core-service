@@ -28,9 +28,9 @@ replicaCount: 1
 
 image:
   registry: docker.io
-  repository: ssksanthosh/ml-core-service
-  tag: release-5.2.0
-  pullPolicy: IfNotPresent
+  repository: tsprasath91/ml-core-service
+  tag: release-5.2.0_1159b45_4
+  #pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   
 
